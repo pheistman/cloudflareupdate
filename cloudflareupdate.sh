@@ -12,7 +12,7 @@ curl -X PUT "https://api.cloudflare.com/client/v4/zones/212e54119a66dc835b5138db
     -H "X-Auth-Email: pheistman@live.co.uk" \
     -H "X-Auth-Key: ccd9ce6cff57c2cdb2a5c302f1aa7816a1bb5" \
     -H "Content-Type: application/json" \
-     --data '{"type":"A","name":"blowtorch.xyz","content":"81.140.241.10","ttl":120,"proxied":false}'
+     --data '{"type":"A","name":"blowtorch.xyz","content":"'`curl --silent https://api.ipify.org`'","ttl":120,"proxied":false}'
 
 #where 0 = failure, 1 = successful update
 if [ $? -eq 0 ]; then
